@@ -1,0 +1,48 @@
+{
+  "name": "node-template-project",
+  "version": "0.0.1",
+  "description": "node-template-project",
+  "license": "MIT",
+  "repository": "",
+  "author": "",
+  "keywords": [
+    ""
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "watch": "tsc --watch",
+    "test-once": "mocha --opts tests/mocha.opts",
+    "test": "nodemon --watch '**/*.ts' -e ts,js,json --exec mocha -r ts-node/register **/*.spec.ts",
+    "clean": "rm -rf dist",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint-fix": "tslint -c tslint.json 'src/**/*.ts' --fix"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.5",
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^8.0.53",
+    "chai": "^4.1.2",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
+  },
+  "engines": {
+    "node": ">=6.10"
+  },
+  "dependencies": {
+    "nodaemon": "0.0.5"
+  }
+}
